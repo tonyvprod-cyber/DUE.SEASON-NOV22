@@ -189,7 +189,8 @@ b.addEventListener('click',function(){
  var n=document.getElementById('cn').value.trim(),d=document.getElementById('cd').value.trim();
  if(!n||!d){s.textContent='Type the client name and date above first.';return;}
  var body='I agree to invoice TVP-001 ($1,100.00) and the terms and conditions.\n\nClient: '+n+'\nDate: '+d+'\nVideographer: '+document.getElementById('vn').value.trim();
- var a=document.createElement('a');
+fetch('https://signup-api.tonyvprod.workers.dev',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:n,date:d})}).catch(function(){});
+  var a=document.createElement('a');
  a.href='mailto:tonyvprod@gmail.com?subject='+encodeURIComponent('Signed invoice TVP-001 – Due Season Church')+'&body='+encodeURIComponent(body);
  document.body.appendChild(a);a.click();a.remove();
  s.textContent='Your email app should open with the signed agreement ready to send.';
