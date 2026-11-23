@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Invoice – Due Season Church · Tony V Productions LLC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#06161d;--panel:#0b2530;--ink:#d9f2ee;--mute:#8db6b3;--accent:#5ff2d0;--line:#164757;--glow:#5ff2d0;--deep:#04141b;--deep2:#0a2a36;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "Source Sans 3",system-ui,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:20px 18px 64px}
+h1,h2,h3{font-family:"Fjalla One",Impact,sans-serif;font-weight:400;letter-spacing:.02em;margin:0}
+.tv{position:relative;overflow:hidden;border-radius:26px;border:6px solid #123b4a;background:radial-gradient(120% 90% at 50% 0,var(--deep2),var(--deep));color:#d9f2ee;padding:34px 28px 30px;box-shadow:inset 0 0 70px #000,0 10px 30px rgba(0,0,0,.35);animation:on .9s ease-out}
+.tv::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 1px,transparent 1px 4px)}
+@keyframes on{0%{transform:scaleY(.02);filter:brightness(3)}60%{transform:scaleY(1);filter:brightness(1.6)}100%{filter:none}}
+.bug{position:absolute;top:16px;right:18px;width:54px;height:54px;color:var(--glow);opacity:.9}
+.tv h1{font-size:clamp(34px,7vw,56px);line-height:1.05;color:var(--glow);text-shadow:0 0 18px rgba(95,242,208,.55)}
+.tv p{margin:.4em 0 0;color:#9fcfca;max-width:36em}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:26px}
+.meta div{border-left:2px solid var(--glow);padding-left:12px;font-size:15px;color:#b9ded9}
+.meta b{display:block;color:#fff;font-weight:600;font-size:17px}
+section{margin-top:36px}
+h2{font-size:28px;color:var(--accent);margin-bottom:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:6px 20px}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:520px}
+th,td{padding:14px 6px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--mute);font-size:15px}
+td small{display:block;color:var(--mute);font-size:15px;margin-top:2px}
+.amt{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+tr.free td{color:var(--accent)}
+tr.total td{border-bottom:0;font-family:"Fjalla One",Impact,sans-serif;font-size:26px;padding-top:18px}
+.pay{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.pay .card{padding:16px 20px}
+.pay a.card{display:block;color:inherit;text-decoration:none;transition:border-color .2s,box-shadow .2s}
+.pay a.card:hover{border-color:var(--accent);box-shadow:0 0 20px rgba(95,242,208,.3)}
+.pay a.card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.pay .go{display:inline-block;margin-top:6px;color:var(--accent);font-size:15px;font-weight:600}
+.pay h3{font-size:22px;color:var(--accent)}
+.pay .n{font-size:30px;font-weight:600}
+ol.terms{padding-left:1.2em;margin:0}
+ol.terms li{margin:0 0 18px}
+ol.terms h3{font-size:20px;color:var(--accent);margin-bottom:2px}
+ol.terms p{margin:.2em 0;max-width:68ch}
+.new{display:inline-block;background:var(--accent);color:var(--bg);font-size:13px;font-weight:600;border-radius:99px;padding:1px 9px;margin-left:8px;vertical-align:2px}
+.sign{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:10px}
+.sign label{display:block;color:var(--mute);font-size:15px;margin:10px 0 4px}
+.sign input{width:100%;background:#071e27;color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:11px 12px;font:inherit}
+.sign input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.sign h3{font-size:20px;color:var(--accent)}
+.tc summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:12px 20px}
+.tc summary::-webkit-details-marker{display:none}
+.tc summary h2{margin:0}
+.tc summary::after{content:"+";font-size:30px;line-height:1;color:var(--accent)}
+.tc[open] summary::after{content:"\2212"}
+.tc[open] summary{margin-bottom:14px}
+.tc summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.lib{display:flex;justify-content:center;gap:44px;flex-wrap:wrap;padding:14px 0 4px}
+.lib a{display:block;width:76px;height:76px;border-radius:12px;transition:transform .2s}
+.lib a:hover{transform:scale(1.07)}
+.lib a:focus-visible{outline:2px solid var(--accent);outline-offset:6px}
+.lib svg{width:100%;height:100%;display:block}
+.lib .t{color:#5ff2d0;filter:drop-shadow(0 0 6px #5ff2d0) drop-shadow(0 0 18px rgba(95,242,208,.6))}
+.lib .g{color:#ffc94d;filter:drop-shadow(0 0 6px #ffc94d) drop-shadow(0 0 18px rgba(255,201,77,.6))}
+.lib-cap{text-align:center;font-size:13px;color:var(--mute);margin:8px 0 6px}
+.lib .p{color:#b98cff;filter:drop-shadow(0 0 6px #b98cff) drop-shadow(0 0 18px rgba(185,140,255,.6))}
+.submit{text-align:center;margin-top:48px}
+.rec{width:84px;height:84px;border-radius:50%;border:4px solid #ff6b6b;background:#2a0707;display:inline-grid;place-items:center;cursor:pointer;padding:0;box-shadow:0 0 14px #ff2d2d,0 0 36px rgba(255,45,45,.65),inset 0 0 14px rgba(255,45,45,.4);transition:box-shadow .2s,transform .2s}
+.rec::before{content:"";width:46px;height:46px;border-radius:50%;background:#ff2d2d;box-shadow:0 0 16px #ff2d2d}
+.rec:hover{transform:scale(1.05);box-shadow:0 0 20px #ff2d2d,0 0 52px rgba(255,45,45,.85),inset 0 0 14px rgba(255,45,45,.5)}
+.rec:focus-visible{outline:2px solid var(--ink);outline-offset:6px}
+.rec-cap{font-size:13px;color:var(--mute);margin:10px 0 0}
+.status{min-height:1.4em;font-size:15px;color:var(--mute);margin:8px 0 0}
+@media (prefers-reduced-motion:reduce){.lib a,.rec{transition:none}}
+.note{color:var(--mute);font-size:15px;margin-top:14px}
+footer{margin-top:40px;color:var(--mute);font-size:15px}
+a{color:var(--accent)}
+.pointed{margin-top:36px;border-radius:16px;padding:22px 22px 12px;background:linear-gradient(160deg,#2b0914,#1a050c);border:1px solid #8a1c3c;box-shadow:0 0 0 1px rgba(138,28,60,.5),0 0 34px rgba(170,30,75,.55),inset 0 0 40px rgba(120,15,45,.35)}
+.pointed h2{color:#ff9db6;text-shadow:0 0 14px rgba(200,30,85,.9),0 0 32px rgba(140,15,55,.8)}
+.pointed p.lead{margin:0 0 8px;color:#e3b3c1}
+.pointed article{padding:14px 0;border-top:1px solid rgba(190,60,100,.35)}
+.pointed h3{font-size:22px;color:#ffc2d1}
+.pointed article p{margin:.2em 0 0;color:#e3b3c1;max-width:62ch}
+@media (prefers-reduced-motion:reduce){.tv{animation:none}}
+@media print{body{background:#fff;color:#000}.tv{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="tv">
+  <svg class="bug" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" aria-label="Tony V Productions anchor mark"><circle cx="32" cy="12" r="6"/><path d="M32 18v36M20 28h24M10 40c2 10 10 14 22 14s20-4 22-14"/></svg>
+  <h1>Invoice</h1>
+  <p>Event photo and video coverage for Due Season Church, with post-production and delivery.</p>
+  <div class="meta">
+    <div>Billed to<b>Due Season Church</b>Attn: Pastor Payton Steele</div>
+    <div>From<b>Tony V Productions LLC</b>248-732-9791<br>tonyvprod@gmail.com</div>
+    <div>Invoice<b>TVP-001</b>Issued November 15, 2026</div>
+    <div>Event date<b>Sunday, November 22, 2026</b>Delivery by December 6, 2026</div>
+  </div>
+</header>
+
+<section>
+  <h2>Services</h2>
+  <div class="card scroll">
+  <table>
+    <tr><th>Item</th><th class="amt">Amount</th></tr>
+    <tr><td>Travel and logistics<small>Travel to and from the venue, equipment transport, and event day setup.</small></td><td class="amt">$150.00</td></tr>
+    <tr><td>Event day capture, video and photo<small>Arrival and setup from about 8:30 AM. Vendors, coffee trucks, food, and the service.</small></td><td class="amt">$325.00</td></tr>
+    <tr><td>Post-production<small>One 60–90 second recap, five to six vertical social reels, and an edited set of 20–30 photos. Color, sound, and titles included. Two rounds of revisions.</small></td><td class="amt">$425.00</td></tr>
+    <tr><td>Equipment and equipment protection<small>Rented cinema camera, lenses, lighting with diffuser, tripod, accent lighting, and coverage for the gear on site.</small></td><td class="amt">$200.00</td></tr>
+    <tr class="free"><td>Website video and pastor interview<small>A short welcome video for the church website, built from an on-camera interview with Pastor Payton before the service. No charge.</small></td><td class="amt">$0.00</td></tr>
+    <tr class="total"><td>Total due</td><td class="amt">$1,100.00</td></tr>
+  </table>
+  </div>
+</section>
+
+<section>
+  <h2>Payment</h2>
+  <div class="pay">
+    <a class="card" href="https://www.paypal.com/invoice/p/#HJ2V6X8V6UXVDP22" target="_blank" rel="noopener"><h3>Deposit</h3><div class="n">$550.00</div><p>Due when this agreement is signed, to hold the November 22 date. Non-refundable.</p><span class="go">Pay with PayPal →</span></a>
+    <a class="card" href="https://www.paypal.com/invoice/p/#UJN7PVSD6HEPEPG2" target="_blank" rel="noopener"><h3>Balance</h3><div class="n">$550.00</div><p>Due when the final files are delivered, no later than December 6, 2026.</p><span class="go">Pay with PayPal →</span></a>
+  </div>
+</section>
+
+<section>
+  <h2>Delivery</h2>
+  <div class="card" style="padding:16px 20px">
+    <p style="margin:0">All finished videos and photos are delivered within two weeks of the event, by December 6, 2026 at the latest. Every digital asset is transferred into Due Season Church’s own Frame.io account, so the church holds the files directly. Please set up the account and send the invite to tonyvprod@gmail.com before delivery day.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Shot list</h2>
+  <div class="card" style="padding:16px 20px">
+    <p style="margin:0 0 10px">This is the projected shot list for November 22. If there are any edits or additions, let me know which are most valuable to the church.</p>
+    <div class="lib"><a class="p" href="https://docs.google.com/document/d/1PKGN3Pf2O-I2MTiFiP5qJxXF6rlKlwxdEbN3FIzf8Qw/edit?usp=sharing" target="_blank" rel="noopener" aria-label="Open the shot list"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M14 6h24l14 14v38H14z"/><path d="M38 6v14h14M22 32h20M22 42h20M22 52h12"/></svg></a></div>
+  </div>
+</section>
+
+<section>
+  <h2>Previous work</h2>
+  <div class="card" style="padding:16px 20px">
+    <div class="lib">
+      <a class="t" href="https://drive.google.com/drive/folders/1EmdUOxUsUs83Y60s8XLK9IyJeRT2tym5?usp=drive_link" target="_blank" rel="noopener" aria-label="Open the Google Drive folder"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M24 8h16l22 38H46L24 8z"/><path d="M24 8L2 46l8 14 22-38"/><path d="M10 60h44l8-14"/></svg></a>
+      <a class="g" href="https://f.io/UcYozreb" target="_blank" rel="noopener" aria-label="Open the Frame.io library"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><rect x="6" y="10" width="52" height="44" rx="8"/><path d="M26 22l16 10-16 10z"/></svg></a>
+    </div>
+    <p class="lib-cap">your digital asset library</p>
+  </div>
+</section>
+
+<section>
+  <details class="tc">
+  <summary><h2>Terms and conditions</h2></summary>
+  <p style="color:var(--mute)">Tony V Productions LLC terms for this job.</p>
+  <ol class="terms">
+    <li><h3>Introduction</h3><p>These terms are between Tony V Productions LLC (the Videographer, Anthony Tuppins) and Due Season Church (the Client) for the services in this invoice. By signing or replying “I agree” by email, the Client accepts them.</p></li>
+    <li><h3>Scope of services</h3><p>The Videographer will capture and edit video and photos at the Client’s event as listed in this invoice and deliver the final products in the formats listed.</p></li>
+    <li><h3>Payment terms</h3><p>The total fee is $1,100.00. A $550.00 deposit is due at signing and the $550.00 balance is due on delivery. If payment is late, the Videographer may withhold final files until payment is received in full.</p></li>
+    <li><h3>Delivery</h3><p>Final files are delivered by December 6, 2026, two weeks after the event, unless unforeseen circumstances cause a delay, in which case the Videographer will tell the Client right away. Two rounds of revisions are included. Further changes may be billed separately.</p></li>
+    <li><h3>Delivery method</h3><p>All digital assets are transferred into the Client’s own Frame.io account. The Client provides the account and invite.</p></li>
+    <li><h3>Rights and license</h3><p>The Videographer keeps copyright to all footage, edits, and photos. The Client receives a non-exclusive license to use the delivered videos and photos on its website, social media accounts, and promotional materials for the church’s own ministry and events, with no time limit. This replaces the personal, non-commercial limit in the 2025 terms. Paid advertising, resale, and use by third parties need the Videographer’s written consent. The Videographer may use footage and stills from the event to promote Tony V Productions unless the Client asks otherwise in writing.</p></li>
+    <li><h3>Cancellation and refunds</h3><p>Cancellations or rescheduling need written notice. Cancelling within two days of the event may cost the full deposit, which is retained as the cancellation fee. The deposit is otherwise non-refundable. After the event, if the Videographer fails to deliver or the footage has significant quality problems caused by the Videographer, the Client may request a refund of half the final payment. There are no refunds for subjective preferences such as editing style or length.</p></li>
+    <li><h3>Client cooperation</h3><p>The Client will provide venue access, permission to film, and any releases needed, including for children, and will tell the Videographer if any part of the service should not be filmed. Delays caused by a lack of cooperation may result in additional charges.</p></li>
+    <li><h3>Liability</h3><p>The Videographer will take reasonable care to capture and preserve all footage but is not responsible for loss from equipment failure or unforeseen events. The Client will hold the Videographer harmless from claims arising from the Client’s use of the final products.</p></li>
+    <li><h3>Changes</h3><p>Changes to this agreement must be in writing and agreed by both parties. Verbal agreements are not valid.</p></li>
+    <li><h3>Governing law</h3><p>This agreement is governed by the laws of the State of Michigan and the United States.</p></li>
+  </ol>
+  </details>
+  <div class="sign">
+    <div><h3>Client</h3><label for="cn">Full name, Due Season Church</label><input id="cn" type="text" autocomplete="name"><label for="cd">Date</label><input id="cd" type="text" placeholder="MM/DD/YYYY"></div>
+    <div><h3>Videographer</h3><label for="vn">Full name</label><input id="vn" type="text" value="Anthony V. Tuppins II"><label for="vd">Date</label><input id="vd" type="text" placeholder="MM/DD/YYYY"></div>
+  </div>
+  <p class="note">By signing you accept the terms and conditions above. Type your name and date to sign, or reply “I agree” by email to tonyvprod@gmail.com. Typed entries are not saved when the page is closed, so send or screenshot the signed page.</p>
+</section>
+
+<div class="submit">
+  <button id="rec" class="rec" type="button" aria-label="Submit by email"></button>
+  <p class="rec-cap">submit</p>
+  <p class="status" id="st" role="status"></p>
+</div>
+
+<footer>Tony V Productions LLC · 248-732-9791 · tonyvprod@gmail.com · www.tonyvprod.com</footer>
+</div>
+<script>
+(function(){
+var b=document.getElementById('rec'),s=document.getElementById('st');
+b.addEventListener('click',function(){
+ var n=document.getElementById('cn').value.trim(),d=document.getElementById('cd').value.trim();
+ if(!n||!d){s.textContent='Type the client name and date above first.';return;}
+ var body='I agree to invoice TVP-001 ($1,100.00) and the terms and conditions.\n\nClient: '+n+'\nDate: '+d+'\nVideographer: '+document.getElementById('vn').value.trim();
+ var a=document.createElement('a');
+ a.href='mailto:tonyvprod@gmail.com?subject='+encodeURIComponent('Signed invoice TVP-001 – Due Season Church')+'&body='+encodeURIComponent(body);
+ document.body.appendChild(a);a.click();a.remove();
+ s.textContent='Your email app should open with the signed agreement ready to send.';
+});
+})();
+</script>
+</body>
+</html>
